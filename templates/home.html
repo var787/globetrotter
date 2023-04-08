@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Globetrotter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPwzIXpgHHk5qx7kOCf0DoUcGWnwmf87k&libraries=places&callback=initAutocomplete"></script>
+
+</head>
+
+<body>
+    <div class="container text-center mt-5">
+        <h1>Enter an Address</h1>
+        <form action="/" method="POST">
+            <input type="text" id="address" name="address" placeholder="Enter address" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function initAutocomplete() {
+            const input = document.getElementById('address');
+            const autocomplete = new google.maps.places.Autocomplete(input);
+        }
+    </script>
+
+</body>
+
+</html>
